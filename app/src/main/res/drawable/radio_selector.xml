@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient android:angle="270" android:endColor="#00000000" android:startColor="@color/colorPrimary" />
+                </shape>
+            </item>
+        </layer-list>
+        <stroke android:width="0dp" />
+    </item>
+    <item android:drawable="@android:color/transparent" />
+</selector>
+
+    <!--<selector xmlns:android="http://schemas.android.com/apk/res/android">--><!--<item android:state_pressed="false">   &lt;!&ndash; 按钮未点击&ndash;&gt;--><!--<shape>--><!--<stroke android:width="0dp" />&lt;!&ndash; 边框颜色，边框大小&ndash;&gt;--><!--<solid android:color="@android:color/transparent" /> &lt;!&ndash; 填充的颜色：这里设置背景透明 &ndash;&gt;--><!--<corners android:radius="5dip" />&lt;!&ndash; android:radius 弧形的半径 &ndash;&gt;--><!--<padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />--><!--</shape>--><!--</item>-->
+
+    <!--<item android:state_pressed="true">  &lt;!&ndash; 按钮选中状态&ndash;&gt;--><!--<shape>--><!--<stroke android:width="2dp" android:color="@color/colorPrimary" />&lt;!&ndash; 边框颜色，边框大小&ndash;&gt;--><!--<solid android:color="@android:color/transparent" /> &lt;!&ndash; 填充的颜色：这里设置背景透明 &ndash;&gt;--><!--<corners android:radius="5dip" />&lt;!&ndash; android:radius 弧形的半径 &ndash;&gt;--><!--<padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />--><!--</shape>--><!--</item>--><!--</selector>-->

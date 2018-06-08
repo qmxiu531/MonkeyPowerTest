@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/number"
+        style="@style/tvStyle"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:gravity="center" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:foreground="@color/gray" />
+
+    <TextView
+        android:id="@+id/pkgName"
+        style="@style/tvStyle"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:gravity="center" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:foreground="@color/gray" />
+
+    <TextView
+        android:id="@+id/appVersion"
+        style="@style/tvStyle"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:gravity="center" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:foreground="@color/gray" />
+
+    <TextView
+        android:id="@+id/power_front"
+        style="@style/tvStyle"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:gravity="center" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:foreground="@color/gray" />
+
+    <TextView
+        android:id="@+id/power_front_avg"
+        style="@style/tvStyle"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:gravity="center" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:foreground="@color/gray" />
+
+    <TextView
+        android:id="@+id/batter_front"
+        style="@style/tvStyle"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:gravity="center" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:foreground="@color/gray" />
+
+    <TextView
+        android:id="@+id/power_back"
+        style="@style/tvStyle"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:gravity="center" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:foreground="@color/gray" />
+
+    <TextView
+        android:id="@+id/power_back_avg"
+        style="@style/tvStyle"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:gravity="center" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:foreground="@color/gray" />
+
+    <TextView
+        android:id="@+id/batter_back"
+        style="@style/tvStyle"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:gravity="center" />
+</LinearLayout>

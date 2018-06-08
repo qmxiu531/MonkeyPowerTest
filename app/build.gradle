@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+        system {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('platform.keystore')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        resConfigs "en"
+        ndk {
+            abiFilter 'armeabi'
+        }
+        applicationId "autotest.gionee.automonkeypowertest"
+        minSdkVersion 22
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.37.01M"
+//        jackOptions {
+//            enabled=true
+//        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.system
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.system
+            applicationVariants.all { variant ->
+                variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + "/app")
+                variant.getPackageApplication().outputScope.apkDatas.forEach { apkData ->
+                    apkData.outputFileName = "AutoMonkeyPowerTest" + "_V${variant.versionName}.apk"
+                }
+            }
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.system
+
+            applicationVariants.all { variant ->
+                variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + "/app/build/outputs/apk/debug/")
+                variant.getPackageApplication().outputScope.apkDatas.forEach { apkData ->
+                    apkData.outputFileName = "app-debug.apk"
+                }
+            }
+        }
+    }
+
+//    applicationVariants.all { variant ->
+//        variant.outputs.all { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                outputFileName = "AutoMonkeyPowerTest" + "_V${variant.versionName}.apk"
+//            }
+//        }
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    productFlavors {
+    }
+    dataBinding.enabled true
+}
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.0.0-beta1'
+    compile 'com.androidadvance:topsnackbar:1.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:+'
+    compile 'com.android.support:cardview-v7:+'
+    compile files('libs/jxl.jar')
+    compile files('libs/commons-net-3.1.jar')
+    compile files('libs/mail.jar')
+    compile files('libs/commons-email-1.4.jar')
+    compile files('libs/commons-email-1.4-javadoc.jar')
+    compile files('libs/activation.jar')
+    compile files('libs/additionnal.jar')
+    compile files('libs/gson-2.5.jar')
+    testCompile 'junit:junit:4.12'
+    compile files('libs/mysql-connector-java-5.1.7-bin.jar')
+    compile files('libs/AccessUtil.jar')
+    provided files('libs/framework_7.0.jar')
+}

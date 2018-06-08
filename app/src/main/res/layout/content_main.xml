@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="autotest.gionee.automonkeypowertest.main.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/timeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/testTypeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/monkeyTest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/monkeyTest" />
+
+                    <!--<RadioButton-->
+                    <!--android:id="@+id/monkeyTest2"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="@string/monkeyTest2" />-->
+
+                    <RadioButton
+                        android:id="@+id/traverseAppTest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/traverseApp" />
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/testTime_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/timeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/testTime"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/testTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:labelFor="@+id/testTime"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        android:paddingLeft="170dp"
+                        android:paddingRight="0dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/appWaitTime_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/appWaitTime_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/appWaitTime_text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/appWaitTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:labelFor="@+id/appWaitTime"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        android:paddingLeft="170dp"
+                        android:paddingRight="0dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lastWaitTime_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/lastWaitTime_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="静置时长(分钟/循环)"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/lastWaitTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:labelFor="@+id/lastWaitTime"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        android:paddingLeft="170dp"
+                        android:paddingRight="0dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cycle_count_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="测试次数(整体循环)"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/cycle_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:labelFor="@+id/cycle_count"
+                        android:maxEms="10"
+                        android:maxLength="5"
+                        android:paddingLeft="170dp"
+                        android:paddingRight="0dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/expectTime_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/needTestAppCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/needTestAppCount"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/planTestTimeOfAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/planTestTimeOfAll"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/finishTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/finishTime"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/selectAppBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="选择应用"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/start"
+            android:layout_below="@+id/timeLayout"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/gray2"
+                android:gravity="center_vertical"
+                android:text="1.测试时长最好输入20分钟以上\n2.测试时不要插入充电器或者usb线\n3.上传数据需要内网支持，请连接公司内部网络(例如:dhgionee(staff))\n4.批次:同个版本的第几次测试\n云平台地址:http://18.8.10.110:8686/DataAnalysis/\n5.满电情况下测试，数据不准确(可能出现为0)\n6.整机电流获取使用的是库仑计，北研项目不一定适用，使用前先咨询项目负责人"
+                android:textSize="14sp" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:text="@string/startTest"
+            android:textSize="26sp" />
+    </RelativeLayout>
+</layout>

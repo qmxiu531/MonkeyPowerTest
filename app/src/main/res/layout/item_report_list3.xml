@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="num"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/pkgName"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/pkgName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="pkg"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintLeft_toRightOf="@+id/number"
+            app:layout_constraintRight_toLeftOf="@+id/appVersion"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/appVersion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="appversion"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintLeft_toRightOf="@+id/pkgName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/front_str"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="前台"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/power_str"
+            app:layout_constraintRight_toLeftOf="@+id/back_str"
+            app:layout_constraintTop_toBottomOf="@+id/appVersion"/>
+
+        <TextView
+            android:id="@+id/back_str"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="后台"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/front_str"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appVersion"/>
+
+        <TextView
+            android:id="@+id/power_str"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="耗电(mAh)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/power_front"
+            app:layout_constraintTop_toBottomOf="@+id/front_str"/>
+
+        <TextView
+            android:id="@+id/power_front"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/power_str"
+            app:layout_constraintRight_toLeftOf="@+id/power_back"
+            app:layout_constraintTop_toBottomOf="@+id/front_str"/>
+
+        <TextView
+            android:id="@+id/power_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/power_front"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_str"/>
+
+        <TextView
+            android:id="@+id/avg_power_str"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="平均(mA)"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/power_front_avg"
+            app:layout_constraintTop_toBottomOf="@+id/power_str"/>
+
+        <TextView
+            android:id="@+id/power_front_avg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/avg_power_str"
+            app:layout_constraintRight_toLeftOf="@+id/power_back_avg"
+            app:layout_constraintTop_toBottomOf="@+id/power_front"/>
+
+        <TextView
+            android:id="@+id/power_back_avg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/power_front_avg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/power_back"/>
+
+        <TextView
+            android:id="@+id/whole_power_str"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="整机(mA)"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/batter_front"
+            app:layout_constraintTop_toBottomOf="@+id/avg_power_str"/>
+
+        <TextView
+            android:id="@+id/batter_front"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/whole_power_str"
+            app:layout_constraintRight_toLeftOf="@+id/batter_back"
+            app:layout_constraintTop_toBottomOf="@+id/power_front_avg"/>
+
+
+        <TextView
+            android:id="@+id/batter_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/batter_front"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/power_back_avg"/>
+
+        <TextView
+            android:id="@+id/voltageAvg_str"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="平均电压(V)"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/voltageAvg_front"
+            app:layout_constraintTop_toBottomOf="@+id/whole_power_str"/>
+
+        <TextView
+            android:id="@+id/voltageAvg_front"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/whole_power_str"
+            app:layout_constraintRight_toLeftOf="@+id/voltageAvg_back"
+            app:layout_constraintTop_toBottomOf="@+id/batter_front"/>
+
+
+        <TextView
+            android:id="@+id/voltageAvg_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/batter_front"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/batter_back"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
